@@ -1,20 +1,22 @@
-header {
-  background-color: white;
-  height: 15vh;
-  padding: 1vh;
-  margin: -15px;
-  color: #3a5a78;
-  position: fixed;
+.header {
+  background-color: #ffffff;
+  height: 100px;
   width: 100%;
-  border-bottom: 1px solid white;
+  /*padding: 1vh;
+  margin: -15px;
+  color: #3a5a78;*/
+  position: fixed;
+  /*border-bottom: 1px solid white;*/
 }
 
-selective-insurance-logo{
-  
+div.selective-insurance-logo{
+  position: fixed;
   /*left: 7vw;
   top: 2vh; */
 }
 
-h1{
-  font-size: 40px;
+div.title{
+  /*padding-top: 50px;*/
+  font-size: 30px;
+  font-family: "Trebuchet MS", serif
 }
