@@ -2,6 +2,7 @@
   background-color: #ffffff;
   height: 100px;
   width: 100%;
+  padding-top: 60px;
   /*padding: 1vh;
   margin: -15px;
   color: #3a5a78;*/
@@ -9,14 +10,21 @@
   /*border-bottom: 1px solid white;*/
 }
 
-div.selective-insurance-logo{
+div.selective-insurance-logo {
   position: fixed;
+  padding-left: 10px;
   /*left: 7vw;
   top: 2vh; */
 }
 
+.logo {
+  width: 15vw;
+}
+
+
 div.title{
   /*padding-top: 50px;*/
-  font-size: 30px;
+  font-size: 3vw;
   font-family: "Trebuchet MS", serif
+  
 }

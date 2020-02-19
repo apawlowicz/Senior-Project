@@ -1,1 +1,39 @@
-<p class="center">register works!</p>
+<div class="center">
+    <div id="register">
+        <h1>APM Registration</h1>
+        <form [formGroup]="registerForm">
+            <label>Name: <br>
+                <input type="text" id="fullname" formControlName="fullname" required>
+            </label>
+            <br> <br>
+            <label>Email address: <br>
+                <input type="text" id="email" formControlName="email" required>
+            </label>
+            <br> <br>
+            <label>Password: <br>
+                <input type="password" id="password" formControlName="password" required>
+            </label>
+            <br> <br>
+            <label>Repeat Password: <br>
+                <input type="password" id="repeat_password" formControlName="repeat_password" required>
+            </label>
+            <br> <br>
+            <label>Role: <br>
+                <select id="role" formControlName="role" required>
+                    <option value="Administrator">Administrator</option>
+                    <option value="Executive">Executive</option>
+                    <option value="Delivery_manager">Delivery Manager</option>
+                    <option value="STE">STE</option>
+                    <option value="RTE">Release Train Engineer</option>
+                    <option value="PO">Product Owner</option>
+                    <option value="Scrum_Master">Scrum Master</option>
+                    <option value="SM">SM</option>
+                    <option value="Standard_User">Standard User</option>
+                </select>
+            </label>
+            <br> <br>
+            <!-- <button type="submit" >Submit</button> -->
+            <button (click)="onSubmit()">Submit</button>
+        </form>
+    </div>
+</div>

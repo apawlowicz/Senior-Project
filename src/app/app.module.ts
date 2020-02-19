@@ -23,6 +23,7 @@ import { DataEntryComponent } from './team/data-entry/data-entry.component';
 import { DashboardPreviewComponent } from './team/dashboard-preview/dashboard-preview.component';
 
 import { DisplayModeComponent } from './display-mode/display-mode.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: '', component:LoginComponent },
@@ -60,6 +61,8 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     ChartsModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot (
       appRoutes,
     )

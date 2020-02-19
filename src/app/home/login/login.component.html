@@ -1,1 +1,26 @@
-<p class="center">login works!</p>
+<div class="center">
+    <div id="login">
+        <h1>APM Login</h1>
+        <form [formGroup]="loginForm">
+            <label>Email address: <br>
+                <input type="text" id="email" formControlName="email" required>
+            </label>
+            <br> <br>
+            <label>Password: <br>
+                <input type="password" id="password" formControlName="password" required>
+            </label>
+            <br>
+            <a [routerLink]="['/password-recovery']" routerLinkActive="router-link-active">Forgot Password</a>
+            <br>
+            <label>
+                <input type="checkbox" id="remember" formControlName="remember" value="RememberMe">
+                Remember Me 
+            </label>
+            <br><br>
+            <!-- <button type="submit">Submit</button> -->
+            <button (click)="onSubmit()">Submit</button>
+        </form>
+        <br><br>
+        <p>Need an account?        <a [routerLink]="['/register']" routerLinkActive="router-link-active">Register</a></p>
+    </div>
+</div>
