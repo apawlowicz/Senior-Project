@@ -15,7 +15,7 @@ export class BarchartComponent implements OnInit {
 
     layout: {
       padding: {
-        top: 100
+        top: 200
       }
     }
 

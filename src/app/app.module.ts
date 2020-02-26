@@ -25,6 +25,9 @@ import { DashboardPreviewComponent } from './team/dashboard-preview/dashboard-pr
 import { DisplayModeComponent } from './display-mode/display-mode.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+
+
 const appRoutes: Routes = [
   { path: '', component:LoginComponent },
   { path: 'login', component:LoginComponent },
@@ -58,6 +61,7 @@ const appRoutes: Routes = [
     DisplayModeComponent,
   ],
   imports: [
+    Ng2SmartTableModule,
     BrowserModule,
     AppRoutingModule,
     ChartsModule,
@@ -65,7 +69,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot (
       appRoutes,
-    )
+    ),
   ],
   providers: [],
   bootstrap: [AppComponent]

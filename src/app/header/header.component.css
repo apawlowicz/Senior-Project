@@ -18,13 +18,13 @@ div.selective-insurance-logo {
 }
 
 .logo {
-  width: 15vw;
+  width: 20vw;
+  padding-left: 50px;
 }
 
 
 div.title{
   /*padding-top: 50px;*/
   font-size: 3vw;
-  font-family: "Trebuchet MS", serif
-  
+  font-family: "Trebuchet MS", serif;
 }
