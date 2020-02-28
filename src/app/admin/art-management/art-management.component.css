@@ -6,41 +6,6 @@
     transform: translate(-50%, -50%);
 } */
 
-div.title {
-    margin: 0;
-    position: absolute;
-    top: 80px;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    font-size: 25px;
-}
-
-div.ScrumMaster{
-    margin: 0;
-    position: absolute;
-    top: 120px;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    font-size: 15px;
-}
-
-div.ProductOwner{
-    margin: 0;
-    position: absolute;
-    top: 150px;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    font-size: 15px;
-}
-
-div.RTEngineer{
-    margin: 0;
-    position: absolute;
-    top: 180px;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    font-size: 15px;
-}
 
 :host /deep/ ng2-smart-table table{
     border-style: inset;

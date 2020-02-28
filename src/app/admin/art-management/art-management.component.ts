@@ -15,17 +15,20 @@ export class ArtManagementComponent implements OnInit {
 
   settings = {
       columns: {
-        name: {
-          title: 'Name (role)',
+        teamname: {
+          title: 'Team Name',
         },
-        email: {
-          title: 'Email Address',
+        artName: {
+          title: 'ART Name',
         },
-        nickname: {
-          title: 'Nickname',
+        POname: {
+          title: 'PO Name',
         },
-        employee: {
-          title: 'Employee',
+        SMname: {
+          title: 'SM Name',
+        },
+        twaURL: {
+          title: 'URL of Team Working Agreement'
         }
       },
       defaultStyle: false,
@@ -36,22 +39,11 @@ export class ArtManagementComponent implements OnInit {
 
     data = [
     {
-      name: "Speedy McSprinterson",
-      email: "speedy.mcsprinterson@selective.com",
-      nickname: "Speedy",
-      employee: "Yes"
-    },
-    {
-      name: "Smartha Knowledgeberry",
-      email: "Smartha.Knowledgeberry@selective.com",
-      nickname: "Smartha",
-      employee: "Yes"
-    },
-    {
-      name: "Guywith Sillyhat",
-      email: "guywith.sillyhat@selective.com",
-      nickname: "Guy",
-      employee: "No"
+      teamname: "Sprintellectuals",
+      artName: "Choo Choo",
+      POname: "Smartha Knowledgeberry",
+      SMname: "Speedy McSprinterson",
+      twaURL: " "
     }
   ];
 
