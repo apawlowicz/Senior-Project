@@ -26,21 +26,9 @@ import { DisplayModeComponent } from './display-mode/display-mode.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { Ng2SmartTableModule } from 'ng2-smart-table';
-
-
-const appRoutes: Routes = [
-  { path: '', component:LoginComponent },
-  { path: 'login', component:LoginComponent },
-  { path: 'register', component:RegisterComponent },
-  { path: 'password-recovery', component:PasswordRecoveryComponent },
-  { path: 'art-management', component:ArtManagementComponent },
-  { path: 'team-management', component:TeamManagementComponent },
-  { path: 'milestones-alerts', component:MilestonesAlertsComponent },
-  { path: 'team-homepage', component:TeamHomepageComponent },
-  { path: 'data-entry', component:DataEntryComponent },
-  { path: 'dashboard-preview', component:DashboardPreviewComponent },
-  { path: 'display-mode', component:DisplayModeComponent },
-];
+import { ProfileComponent } from './home/profile/profile.component';
+import { HttpClientModule } from '@angular/common/http';
+import { authInterceptorProviders } from './helpers/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -59,6 +47,7 @@ const appRoutes: Routes = [
     DataEntryComponent,
     DashboardPreviewComponent,
     DisplayModeComponent,
+    ProfileComponent,
   ],
   imports: [
     Ng2SmartTableModule,
@@ -67,11 +56,10 @@ const appRoutes: Routes = [
     ChartsModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot (
-      appRoutes,
-    ),
+    RouterModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

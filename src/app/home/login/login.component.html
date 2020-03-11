@@ -1,7 +1,13 @@
 <div class="center">
     <div id="login">
+        <div class="alert alert-success" *ngIf="isLoggedIn">
+            Logged in as {{ name }}.
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="isLoginFailed">
+            Login failed: {{ errorMessage }}
+        </div>
         <h1>APM Login</h1>
-        <form [formGroup]="loginForm">
+        <form [formGroup]="loginForm" name="LogForm" (ngSubmit)="onSubmit()">
             <label>Email address: <br>
                 <input type="text" id="email" formControlName="email" required>
             </label>
@@ -17,8 +23,8 @@
                 Remember Me
             </label>
             <br><br>
-            <!-- <button type="submit">Submit</button> -->
-            <button (click)="onSubmit()">Submit</button>
+            <button type="submit">Submit</button>
+            <!-- <button (click)="onSubmit()">Submit</button> -->
         </form>
         <br><br>
         <p>Need an account?        <a [routerLink]="['/register']" routerLinkActive="router-link-active">Register</a></p>

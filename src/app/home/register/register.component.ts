@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl,FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
 
 
 @Component({
@@ -16,13 +17,28 @@ export class RegisterComponent implements OnInit {
     role: new FormControl(''),
   });
 
-  constructor() { }
+  isSuccessful = false;
+  isSignUpFailed = false;
+  errorMessage = '';
+
+  constructor(private authService: AuthService) { }
+  ngOnInit() { }
+
+  // onSubmit() {
+  //   console.log(this.registerForm.value);
+  // }
 
   onSubmit() {
-    console.log(this.registerForm.value);
+    this.authService.register(this.registerForm).subscribe(
+      data => {
+        console.log(data);
+        this.isSuccessful = true;
+        this.isSignUpFailed = false;
+      },
+      err => {
+        this.errorMessage = err.error.message;
+        this.isSignUpFailed = true;
+      }
+    );
   }
-
-  ngOnInit() {
-  }
-
 }
