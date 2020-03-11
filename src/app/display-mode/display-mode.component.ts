@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CustomerModel } from '../models/CustomerModel';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-display-mode',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayModeComponent implements OnInit {
 
-  constructor() { }
+  customers: CustomerModel[];
+
+  constructor(private dataService: DataService, private router: Router) { }
 
   ngOnInit() {
+    this.getAllCustomers();
   }
+
+  getAllCustomers(): void {
+    this.dataService.getAllCustomers().subscribe(data=>{
+      this.customers = data;
+    });
+  };
 
 }

@@ -26,7 +26,10 @@ import { DisplayModeComponent } from './display-mode/display-mode.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { NbCardModule } from '@nebular/theme';
 
+import { HttpClientModule } from '@angular/common/http';
+import { DataService } from './data.service';
 
 const appRoutes: Routes = [
   { path: '', component:LoginComponent },
@@ -70,8 +73,10 @@ const appRoutes: Routes = [
     RouterModule.forRoot (
       appRoutes,
     ),
+    HttpClientModule,
+    NbCardModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

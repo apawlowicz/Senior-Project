@@ -18,10 +18,11 @@ var server = app.listen(8081, function () {
     console.log("app listening at http://%s:%s", host, port)
 });
 
+//Get all Agile Release Trains
 app.get('/', function (req, res) {
     sql.connect(sqlConfig, function() {
         var request = new sql.Request();
-        request.query('select * from AgileReleaseTrains', function(err, recordset) {
+        request.query('select * from customer', function(err, recordset) {
             if(err) console.log(err);
             res.end(JSON.stringify(recordset)); // Result in JSON format
         });
