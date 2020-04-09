@@ -29,6 +29,7 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { ProfileComponent } from './home/profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { authInterceptorProviders } from './helpers/auth.interceptor';
+import { DataService } from './models/data.service';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,7 @@ import { authInterceptorProviders } from './helpers/auth.interceptor';
     RouterModule,
     HttpClientModule,
   ],
-  providers: [authInterceptorProviders],
+  providers: [authInterceptorProviders, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

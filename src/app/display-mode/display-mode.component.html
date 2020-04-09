@@ -1,2 +1,8 @@
-<app-barchart></app-barchart>
-<app-piechart></app-piechart>
+<!--<app-barchart></app-barchart>
+<app-piechart></app-piechart>-->
+
+<div *ngFor='let team of teams$' style="text-align: center;">
+    <h2>
+        {{ team.teamId }} - {{ team.teamName }}
+    </h2>
+</div>
