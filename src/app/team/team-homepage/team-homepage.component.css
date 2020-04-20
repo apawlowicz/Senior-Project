@@ -6,6 +6,18 @@
     transform: translate(-50%, -50%);
 } */
 
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container {
+    margin-top: 40px;
+}
+
+
 div.title {
     margin: 0;
     position: absolute;
@@ -52,9 +64,9 @@ div.RTEngineer{
     border-spacing: 2px;
     border-color: grey; /* border of the big table*/
 
-    margin-top: 210px;
-    margin-left: 200px;
-    width: 75%;
+    /* margin-top: 210px; */
+    /* margin-left: 200px; */
+    /* width: 75%; */
 }
 
 /* grid lines */

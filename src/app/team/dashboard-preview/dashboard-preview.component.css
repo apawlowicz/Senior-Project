@@ -1,7 +1,22 @@
-.center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .container {
+    margin-top: 40px;
+  }
+
+  .board {
+    border-style: solid;
+    border-width: 3px;
+    min-height: 500px;
+  }
+
+  .vl {
+    border-right: 2px solid black;
+    height: 500px;
+  }
+
+  .top {
+    min-height: 250px;
+  }
+
+  .bottom {
+    min-height: 250px;
   }
