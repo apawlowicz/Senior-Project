@@ -31,6 +31,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { authInterceptorProviders } from './helpers/auth.interceptor';
 import { DataService } from './models/data.service';
 
+// import { NbThemeService, NbColorHelper } from '../../ngx-admin/node_modules/@nebular/theme';
+// import {
+//   NbChatModule,
+//   NbDatepickerModule,
+//   NbDialogModule,
+//   NbMenuModule,
+//   NbSidebarModule,
+//   NbToastrModule,
+//   NbWindowModule,
+// } from '../../ngx-admin/node_modules/@nebular/theme';
+// import { ChartjsBarComponent } from '../../ngx-admin/src/app/pages/charts/chartjs/chartjs-bar.component';
+// import { CoreModule } from '../../ngx-admin/src/app/@core/core.module';
+// import { ThemeModule } from '../../ngx-admin/src/app/@theme/theme.module';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +64,18 @@ import { DataService } from './models/data.service';
     DashboardPreviewComponent,
     DisplayModeComponent,
     ProfileComponent,
+
+    // ChartjsBarComponent,
+    // NbSidebarModule,
+    // NbMenuModule,
+    // NbDatepickerModule,
+    // NbDialogModule,
+    // NbWindowModule,
+    // NbToastrModule,
+    // NbChatModule,
+    // CoreModule,
+    // ThemeModule,
+
   ],
   imports: [
     Ng2SmartTableModule,
@@ -59,6 +86,10 @@ import { DataService } from './models/data.service';
     ReactiveFormsModule,
     RouterModule,
     HttpClientModule,
+
+    // NbThemeService, 
+    // NbColorHelper,
+
   ],
   providers: [authInterceptorProviders, DataService],
   bootstrap: [AppComponent]

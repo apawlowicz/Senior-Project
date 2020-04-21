@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Team } from '../../models/team.model';
+import { DataService } from '../../models/data.service';
 
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 
@@ -12,6 +14,9 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
   //`
 })
 export class TeamHomepageComponent implements OnInit {
+
+  teams$: Team[];
+  
 
   settings = {
       columns: {
@@ -56,9 +61,11 @@ export class TeamHomepageComponent implements OnInit {
   ];
 
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    return this.dataService.getTeams()
+    .subscribe(data => this.teams$ = data);
   }
 
 }

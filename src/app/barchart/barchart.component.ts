@@ -13,12 +13,6 @@ export class BarchartComponent implements OnInit {
     responsive: true,
     maintainAspectRatio: false,
 
-    layout: {
-      padding: {
-        top: 200
-      }
-    }
-
   };
   public barChartLabels = ['2007', '2008', '2009', '2010', '2011', '2012'];
   public barChartType = 'bar';

@@ -6,7 +6,7 @@
     </div>
     <br><br><br>
     <div class="row board">
-        <div class="col-md-3 vl">
+        <div class="col-md-3">
             <div>
                 <h2>Sprintellectuals</h2>
                 <br>
@@ -21,11 +21,18 @@
 
         <!-- <div class="col-md-1 vl"></div> -->
 
-        <div class="col-md-9">
+        <div class="col-md-9 vl">
             <div >
                 <div class="row top">
                     <div class="col-md-4">
-                        <p>line graph</p>
+                        <canvas baseChart
+                            height="250" width="250"
+                            [datasets]="lineChartData1"
+                            [labels]="lineChartLabels1"
+                            [options]="lineChartOptions1"
+                            [legend]="lineChartLegend1"
+                            [chartType]="lineChartType1">
+                        </canvas>
                     </div>
                     <div class="col-md-8">
                         <p>the data glyphs</p>
@@ -33,13 +40,31 @@
                 </div>
                 <div class="row bottom">
                     <div class="col-md-4">
-                        <p>line graph</p>
+                        <canvas baseChart
+                            height="250" width="250"
+                            [datasets]="lineChartData2"
+                            [labels]="lineChartLabels2"
+                            [options]="lineChartOptions2"
+                            [legend]="lineChartLegend2"
+                            [chartType]="lineChartType2">
+                        </canvas>
                     </div>
                     <div class="col-md-4">
-                        <p>bar graph</p>
+                        <canvas baseChart
+                            height="250" width="250"
+                            [datasets]="barChartData"
+                            [labels]="barChartLabels"
+                            [options]="barChartOptions"
+                            [legend]="barChartLegend"
+                            [chartType]="barChartType">
+                        </canvas>
                     </div>
                     <div class="col-md-4">
-                        <p>pie graph</p>
+                        <canvas baseChart
+                            height="250" width="250"
+                            [data]="pieChartData"
+                            [labels]="pieChartLabels"
+                            [chartType]="pieChartType"></canvas>
                     </div>
                 </div>
             </div>
@@ -47,7 +72,3 @@
 
     </div>
 </div>
-
-
-<app-barchart></app-barchart>
-<app-piechart></app-piechart>
