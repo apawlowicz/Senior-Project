@@ -4,12 +4,16 @@
 
   <!-- data-interval is the interval between slides 1000 = 1 second -->
   <div id="ART" class="carousel slide outter" data-interval="9000" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#ART" data-slide-to="0" class="active"></li>
+      <li data-target="#ART" data-slide-to="1"></li>
+    </ol>
   
     <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
+    <div class="carousel-inner"  *ngFor='let art of Art; index as i'>
+      <div [ngClass]="{'item active': i=='0', 'item': i=='1'}">
         <app-art-template
-          [Art]="Art"
+          [Art]="art"
 
           [chartlabels1]="ArtLabels1"
           [chartdata1]="ArtData1"
@@ -23,10 +27,6 @@
           [chartdata3]="ArtData3"
           [charttype3]="ArtChart3">
         </app-art-template>
-      </div>
-  
-      <div class="item">
-        <img src="https://picsum.photos/id/984/900/500" alt="New York">
       </div>
     </div>
   

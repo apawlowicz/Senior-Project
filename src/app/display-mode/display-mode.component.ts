@@ -11,26 +11,36 @@ import { DataService } from '../models/data.service';
 export class DisplayModeComponent implements OnInit{
   teams$: Team[];
 
-  images = [5, 50, 30].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  images = [944, 1011, 984];
   
-  public Art = {
-    artid: 8,
-    artName: 'Test Train',
-    teams: [
-      {teamId: 8, teamName: 'Sprintellectuals', artName: 'Test Train'},
-    ],
-    member: [ 
-      {userid: 47, username: 'Speedy McSpeederson', role: 'SM', teamName: 'Sprintellectuals', artName: 'Test Train'},
-      {userid: 48, username: 'Smartha Knowlegeberry', role: 'PO', teamName: 'Sprintellectuals', artName: 'Test Train'},
-      {userid: 49, username: 'Rick Grimes', role: 'TL', teamName: 'Sprintellectuals', artName: 'Test Train'},
-      {userid: 50, username: 'Carl Grimes', role: 'TM', teamName: 'Sprintellectuals', artName: 'Test Train'},
-      {userid: 51, username: 'Daryl Dixon', role: 'TM', teamName: 'Sprintellectuals', artName: 'Test Train'},
-      {userid: 52, username: 'Glenn Rhee', role: 'TM', teamName: 'Sprintellectuals', artName: 'Test Train'},
-      {userid: 53, username: 'Guywith Sillyhat', role: 'RTE', teamName: 'Sprintellectuals', artName: 'Test Train'},
-      {userid: 54, username: 'Smaht Erdenyu', role: 'PM', teamName: 'Sprintellectuals', artName: 'Test Train'},
-      {userid: 55, username: 'Rick Astley', role: 'DM', teamName: 'Sprintellectuals', artName: 'Test Train'},
-    ]
-  }
+  public Art = [
+    { 
+      artid: 2,
+      artName: 'Big Biz',
+      teams: [
+        {teamId: 1, teamName: 'Sopranos', artName: 'Big Biz'},
+        {teamId: 2, teamName: 'Agilistas', artName: 'Big Biz'},
+        {teamId: 3, teamName: 'Illuminati', artName: 'Big Biz'},
+      ],
+      member: [ 
+        {userid: 1, username: 'Jeremy', role: 'RTE', teamName: 'Sopranos', artName: 'Big Biz'},
+        {userid: 2, username: 'Justin', role: 'STE', teamName: 'Illuminati', artName: 'Big Biz'},
+      ] 
+    },
+
+    {
+      artid: 3,
+      artName: 'CALMR',
+      teams: [
+        {teamId: 6, teamName: 'Mandalorians', artName: 'CALMR'},
+        {teamId: 7, teamName: 'Team Awesome', artName: 'CALMR'},
+      ],
+      member: [ 
+        {userid: 3, username: 'Meenal', role: 'RTE', teamName: 'Mandalorians', artName: 'CALMR'},
+        {userid: 4, username: 'Russ', role: 'STE', teamName: 'Mandalorians', artName: 'CALMR'},
+      ] 
+    }
+  ];
 
   public ArtLabels1 = ['2007', '2008', '2009', '2010', '2011', '2012'];
   public ArtData1 = [

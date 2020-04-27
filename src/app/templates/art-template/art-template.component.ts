@@ -18,7 +18,7 @@ export class ArtTemplateComponent implements OnInit {
 
   @Input() public Art: ART;
   public Teams: Team[];
-  public allMembers: Array<User>;
+  public allMembers: Array<User> = [];
 
   @Input() public chartlabels1: string[];
   public ChartLabels1: string[];
@@ -44,22 +44,15 @@ export class ArtTemplateComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    for (let i in this.Art.member)
-    {
-      if (this.Art.member[i].role == 'PM') {
-        console.log(this.Art.member[i])
-        // this.allMembers.push(this.Art.member[i])
-      }
-      else if (this.Art.member[i].role == 'DM') {
-        console.log(this.Art.member[i])
-        // this.allMembers.push(this.Art.member[i])
-      }
-      else if (this.Art.member[i].role == 'RTE') {
-        console.log(this.Art.member[i])
-        // this.allMembers.push(this.Art.member[i])
-      }
-    }
-    console.log(this.chartdata3)
+    // for (let i in this.Art.member)
+    // {
+    //   if (this.Art.member[i].role == 'STE') {
+    //     this.allMembers.push(this.Art.member[i])
+    //   }
+    //   else if (this.Art.member[i].role == 'RTE') {
+    //     this.allMembers.push(this.Art.member[i])
+    //   }
+    // }
 
     this.ChartLabels1 = this.chartlabels1;
     this.ChartData1 = this.chartdata1;
@@ -74,6 +67,7 @@ export class ArtTemplateComponent implements OnInit {
     this.ChartType3 = this.charttype3;
 
     this.Teams = this.Art.teams;
+    this.allMembers = this.Art.member;
 
   }
 
