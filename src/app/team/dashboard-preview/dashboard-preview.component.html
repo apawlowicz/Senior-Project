@@ -1,74 +1,29 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <h1> Sprintellectuals Team Dashboard Preview</h1>
+            <h1> {{teammembers.teamName}} Team Dashboard Preview</h1>
         </div>
     </div>
-    <br><br><br>
-    <div class="row board">
-        <div class="col-md-3">
-            <div>
-                <h2>Sprintellectuals</h2>
-                <br>
-                <h4>SM | Speedy McSpeederson</h4>
-                <h4>PO | Smartha Knowlegeberry</h4>
-                <h4>TL | Rick Grimes</h4>
-                <h4>TM | Carl Grimes</h4>
-                <h4>TM | Daryl Dixon</h4>
-                <h4>TM | Glenn Rhee</h4>
-            </div>
-        </div>
+    <div class="board">
+        <app-team-template 
+            [TeamMembers]="teammembers"
 
-        <!-- <div class="col-md-1 vl"></div> -->
+            [chartlabels1]="TeamLabels1"
+            [chartdata1]="TeamData1"
+            [charttype1]="TeamChart1"
+            
+            [chartlabels2]="TeamLabels2"
+            [chartdata2]="TeamData2"
+            [charttype2]="TeamChart2"
 
-        <div class="col-md-9 vl">
-            <div >
-                <div class="row top">
-                    <div class="col-md-4">
-                        <canvas baseChart
-                            height="250" width="250"
-                            [datasets]="lineChartData1"
-                            [labels]="lineChartLabels1"
-                            [options]="lineChartOptions1"
-                            [legend]="lineChartLegend1"
-                            [chartType]="lineChartType1">
-                        </canvas>
-                    </div>
-                    <div class="col-md-8">
-                        <p>the data glyphs</p>
-                    </div>
-                </div>
-                <div class="row bottom">
-                    <div class="col-md-4">
-                        <canvas baseChart
-                            height="250" width="250"
-                            [datasets]="lineChartData2"
-                            [labels]="lineChartLabels2"
-                            [options]="lineChartOptions2"
-                            [legend]="lineChartLegend2"
-                            [chartType]="lineChartType2">
-                        </canvas>
-                    </div>
-                    <div class="col-md-4">
-                        <canvas baseChart
-                            height="250" width="250"
-                            [datasets]="barChartData"
-                            [labels]="barChartLabels"
-                            [options]="barChartOptions"
-                            [legend]="barChartLegend"
-                            [chartType]="barChartType">
-                        </canvas>
-                    </div>
-                    <div class="col-md-4">
-                        <canvas baseChart
-                            height="250" width="250"
-                            [data]="pieChartData"
-                            [labels]="pieChartLabels"
-                            [chartType]="pieChartType"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
+            [chartlabels3]="TeamLabels3"
+            [chartdata3]="TeamData3"
+            [charttype3]="TeamChart3"
 
+            [chartlabels4]="TeamLabels4"
+            [chartdata4]="TeamData4"
+            [charttype4]="TeamChart4"
+            >
+        </app-team-template>
     </div>
 </div>

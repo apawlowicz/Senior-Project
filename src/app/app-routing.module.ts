@@ -12,10 +12,9 @@ import { TeamHomepageComponent } from './team/team-homepage/team-homepage.compon
 import { DataEntryComponent } from './team/data-entry/data-entry.component';
 import { DashboardPreviewComponent } from './team/dashboard-preview/dashboard-preview.component';
 import { DisplayModeComponent } from './display-mode/display-mode.component';
-import { ProfileComponent } from './home/profile/profile.component';
 
 const appRoutes: Routes = [
-  { path: '', component:ProfileComponent },
+  { path: '', component:LoginComponent },
   { path: 'login', component:LoginComponent },
   { path: 'register', component:RegisterComponent },
   { path: 'password-recovery', component:PasswordRecoveryComponent },
@@ -26,7 +25,6 @@ const appRoutes: Routes = [
   { path: 'data-entry', component:DataEntryComponent },
   { path: 'dashboard-preview', component:DashboardPreviewComponent },
   { path: 'display-mode', component:DisplayModeComponent },
-  { path: 'profile', component:ProfileComponent },
 ];
 
 @NgModule({

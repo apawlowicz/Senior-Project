@@ -6,8 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ChartsModule } from 'ng2-charts';
-import { BarchartComponent } from './barchart/barchart.component';
-import { PiechartComponent } from './piechart/piechart.component';
+import { BarchartComponent } from './graphs/barchart/barchart.component';
+import { PiechartComponent } from './graphs/piechart/piechart.component';
+import { LinechartComponent } from './graphs/linechart/linechart.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 
 import { LoginComponent } from './home/login/login.component';
@@ -26,10 +27,11 @@ import { DisplayModeComponent } from './display-mode/display-mode.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { Ng2SmartTableModule } from 'ng2-smart-table';
-import { ProfileComponent } from './home/profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { authInterceptorProviders } from './helpers/auth.interceptor';
 import { DataService } from './models/data.service';
+import { ArtTemplateComponent } from './templates/art-template/art-template.component';
+import { TeamTemplateComponent } from './templates/team-template/team-template.component';
 
 // import { NbThemeService, NbColorHelper } from '../../ngx-admin/node_modules/@nebular/theme';
 // import {
@@ -63,7 +65,9 @@ import { DataService } from './models/data.service';
     DataEntryComponent,
     DashboardPreviewComponent,
     DisplayModeComponent,
-    ProfileComponent,
+    LinechartComponent,
+    ArtTemplateComponent,
+    TeamTemplateComponent,
 
     // ChartjsBarComponent,
     // NbSidebarModule,

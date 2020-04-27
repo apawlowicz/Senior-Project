@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="row board">
+        <div class="col-md-3">
+            <div>
+                <h2 style="overflow-wrap: normal;">{{TeamMembers.teamName}}</h2>
+                <br>
+                <div *ngFor='let user of allMembers'>
+                    <h4>{{user.role}} | {{user.username}}</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="col-md-1 vl"></div> -->
+
+        <div class="col-md-9 vl">
+            <div >
+                <div class="row top">
+                    <div class="col-md-4">
+                        <canvas baseChart
+                            height="250" width="250"
+                            [datasets]="ChartData1"
+                            [labels]="ChartLabels1"
+                            [options]="ChartOptions"
+                            [legend]= true
+                            [chartType]= "ChartType1">
+                        </canvas>
+                    </div>
+                    <div class="col-md-2 info">
+                        <p>PI Objectives Complete</p>
+                    </div>
+                    <div class="col-md-2 info">
+                        <p>Open Defects</p>
+                    </div>
+                    <div class="col-md-2 info">
+                        <p>Avg. Velocity</p>
+                    </div>
+                    <div class="col-md-2 info">
+                        <p>Team Happiness</p>
+                    </div>
+                </div>
+                <div class="row bottom">
+                    <div class="col-md-4">
+                        <canvas baseChart
+                            height="250" width="250"
+                            [datasets]="ChartData2"
+                            [labels]="ChartLabels2"
+                            [options]="ChartOptions"
+                            [legend]= true
+                            [chartType]="ChartType2">
+                        </canvas>
+                    </div>
+                    <div class="col-md-4">
+                        <canvas baseChart
+                            height="250" width="250"
+                            [datasets]="ChartData3"
+                            [labels]="ChartLabels3"
+                            [options]="ChartOptions"
+                            [legend]= true
+                            [chartType]="ChartType3">
+                        </canvas>
+                    </div>
+                    <div class="col-md-4">
+                        <canvas baseChart
+                            height="250" width="250"
+                            [data]="ChartData4"
+                            [labels]="ChartLabels4"
+                            [legend]= true
+                            [chartType]="ChartType4"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

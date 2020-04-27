@@ -1,0 +1,34 @@
+.container {
+    /* margin-top: 40px; */
+    /* border-style: solid; */
+  }
+
+  .board {
+    /* border-style: solid; */
+    /* border-width: 3px; */
+    height: 500px;
+  }
+
+  .vl {
+    border-left: 2px solid black;
+  }
+
+  .top {
+    min-height: 250px;
+  }
+
+  .bottom {
+    min-height: 250px;
+  }
+
+  .info {
+    display: table-cell;
+    text-align: center;
+    height: 150px;
+    vertical-align: middle;
+  }
+
+  .graphs {
+    height: 250px;
+    width: 250px;
+  }

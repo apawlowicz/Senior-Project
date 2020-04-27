@@ -1,7 +1,38 @@
 .center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+  padding: 10px;
+  margin: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 600px; 
+  max-width: 600px;
+}
+
+
+.container {
+  margin-top: 40px;
+}
+
+.board {
+  border-style: solid;
+  border-width: 3px;
+  min-height: 500px;
+}
+
+.vl {
+  border-left: 2px solid black;
+}
+
+.top {
+  min-height: 250px;
+}
+
+.bottom {
+  min-height: 250px;
+}
+
+.graphs {
+  height: 250px;
+  width: 250px;
+}

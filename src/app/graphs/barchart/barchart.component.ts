@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-barchart',
@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./barchart.component.css']
 })
 export class BarchartComponent implements OnInit {
+  
+  // @Input() barChartLabels: string[]
+  // @Input() barChartType: string[]
+  // @Input() barChartLegend: boolean
+  // @Input() barChartData: string[]
+
+
 
   constructor() { }
   public barChartOptions = {

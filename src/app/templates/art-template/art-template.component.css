@@ -1,0 +1,30 @@
+.container {
+    /* margin-top: 40px; */
+  }
+
+  .board {
+    /* border-style: solid; */
+    border-width: 3px;
+    max-height: 300px;
+  }
+
+  .vl {
+    border-left: 2px solid black;
+  }
+
+  .bottom {
+    min-height: 300px;
+  }
+
+  .info {
+    display: table-cell;
+    text-align: center;
+    height: 150px;
+    vertical-align: middle;
+  }
+  
+  .graph {
+    /* border: solid black 1px;
+    margin: 0px;
+    padding: 0px; */
+  }
