@@ -32,6 +32,7 @@ import { authInterceptorProviders } from './helpers/auth.interceptor';
 import { DataService } from './models/data.service';
 import { ArtTemplateComponent } from './templates/art-template/art-template.component';
 import { TeamTemplateComponent } from './templates/team-template/team-template.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 // import { NbThemeService, NbColorHelper } from '../../ngx-admin/node_modules/@nebular/theme';
@@ -91,6 +92,7 @@ import { TeamTemplateComponent } from './templates/team-template/team-template.c
     ReactiveFormsModule,
     RouterModule,
     HttpClientModule,
+    NgbModule,
 
     // NbThemeService, 
     // NbColorHelper,

@@ -11,19 +11,16 @@ export class DashboardPreviewComponent implements OnInit {
 
   constructor() { }
 
-  // public height = "250"
-  // public width = "250"
-
   teammembers = {
-    teamId: 8,
-    teamName: 'Sprintellectuals',
+    teamId: 1,
+    teamName: 'Sopranos',
     member: [ 
-      {userid: 47, username: 'Speedy McSpeederson', role: 'SM', teamName: 'Sprintellectuals', artName: 'Test Train'},
-      {userid: 48, username: 'Smartha Knowlegeberry', role: 'PO', teamName: 'Sprintellectuals', artName: 'Test Train'},
-      {userid: 49, username: 'Rick Grimes', role: 'TL', teamName: 'Sprintellectuals', artName: 'Test Train'},
-      {userid: 50, username: 'Carl Grimes', role: 'TM', teamName: 'Sprintellectuals', artName: 'Test Train'},
-      {userid: 51, username: 'Daryl Dixon', role: 'TM', teamName: 'Sprintellectuals', artName: 'Test Train'},
-      {userid: 52, username: 'Glenn Rhee', role: 'TM', teamName: 'Sprintellectuals', artName: 'Test Train'},
+      {userid: 46, username: 'Danilo', roleid: 7, role: 'SM', teamid: 1, teamName: 'Sopranos', artid: 2, artName: 'Big Biz'},
+      {userid: 45, username: 'Augustus', roleid: 6, role: 'PO', teamid: 1, teamName: 'Sopranos', artid: 2, artName: 'Big Biz'},
+      {userid: 44, username: 'Kristin', roleid: 8, role: 'SU', teamid: 1, teamName: 'Sopranos', artid: 2, artName: 'Big Biz'},
+      {userid: 43, username: 'Andria', roleid: 8, role: 'SU', teamid: 1, teamName: 'Sopranos', artid: 2, artName: 'Big Biz'},
+      {userid: 42, username: 'Fannie', roleid: 8, role: 'SU', teamid: 1, teamName: 'Sopranos', artid: 2, artName: 'Big Biz'},
+      {userid: 41, username: 'Donovan',roleid: 8,  role: 'SU', teamid: 1, teamName: 'Sopranos', artid: 2, artName: 'Big Biz'},
     ]
   }
 

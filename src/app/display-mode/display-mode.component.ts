@@ -23,8 +23,12 @@ export class DisplayModeComponent implements OnInit{
         {teamId: 3, teamName: 'Illuminati', artName: 'Big Biz'},
       ],
       member: [ 
-        {userid: 1, username: 'Jeremy', role: 'RTE', teamName: 'Sopranos', artName: 'Big Biz'},
-        {userid: 2, username: 'Justin', role: 'STE', teamName: 'Illuminati', artName: 'Big Biz'},
+        {userid: 1, username: 'Jeremy', roleid: 5, role: 'RTE', teamid: 1, teamName: 'Sopranos',artid: 2, artName: 'Big Biz'},
+        {userid: 1, username: 'Justin', roleid: 4, role: 'STE', teamid: 1, teamName: 'Sopranos',artid: 2, artName: 'Big Biz'},
+        {userid: 1, username: 'SteveDM', roleid: 2, role: 'EX', teamid: 2, teamName: 'Agilistas',artid: 2, artName: 'Big Biz'},
+        {userid: 1, username: 'Tim', roleid: 3, role: 'DM', teamid: 2, teamName: 'Agilistas',artid: 2, artName: 'Big Biz'},
+        {userid: 1, username: 'Lisa', roleid: 4, role: 'STE', teamid: 3, teamName: 'Illuminati',artid: 2, artName: 'Big Biz'},
+        
       ] 
     },
 
@@ -36,8 +40,11 @@ export class DisplayModeComponent implements OnInit{
         {teamId: 7, teamName: 'Team Awesome', artName: 'CALMR'},
       ],
       member: [ 
-        {userid: 3, username: 'Meenal', role: 'RTE', teamName: 'Mandalorians', artName: 'CALMR'},
-        {userid: 4, username: 'Russ', role: 'STE', teamName: 'Mandalorians', artName: 'CALMR'},
+        {userid: 3, username: 'Meenal', roleid: 5, role: 'RTE', teamid: 6, teamName: 'Mandalorians', artid: 3, artName: 'CALMR'},
+        {userid: 4, username: 'Russ', roleid: 4, role: 'STE', teamid: 1, teamName: 'Mandalorians', artid: 3, artName: 'CALMR'},
+        {userid: 19, username: 'Socorro', roleid: 2, role: 'EX', teamid: 2, teamName: 'Mandalorians', artid: 3, artName: 'CALMR'},
+        {userid: 14, username: 'Slyvia', roleid: 3, role: 'DM', teamid: 2, teamName: 'Team Awesome', artid: 3, artName: 'CALMR'},
+        {userid: 16, username: 'Dino', roleid: 4, role: 'STE', teamid: 3, teamName: 'Team Awesome', artid: 3, artName: 'CALMR'},
       ] 
     }
   ];
@@ -66,15 +73,15 @@ export class DisplayModeComponent implements OnInit{
 
 
   teammembers = {
-    teamId: 8,
-    teamName: 'Sprintellectuals',
+    teamId: 1,
+    teamName: 'Sopranos',
     member: [ 
-      {userid: 47, username: 'Speedy McSpeederson', role: 'SM', teamName: 'Sprintellectuals', artName: 'Test Train'},
-      {userid: 48, username: 'Smartha Knowlegeberry', role: 'PO', teamName: 'Sprintellectuals', artName: 'Test Train'},
-      {userid: 49, username: 'Rick Grimes', role: 'TL', teamName: 'Sprintellectuals', artName: 'Test Train'},
-      {userid: 50, username: 'Carl Grimes', role: 'TM', teamName: 'Sprintellectuals', artName: 'Test Train'},
-      {userid: 51, username: 'Daryl Dixon', role: 'TM', teamName: 'Sprintellectuals', artName: 'Test Train'},
-      {userid: 52, username: 'Glenn Rhee', role: 'TM', teamName: 'Sprintellectuals', artName: 'Test Train'},
+      {userid: 46, username: 'Danilo', roleid: 7, role: 'SM', teamid: 1, teamName: 'Sopranos', artid: 2, artName: 'Big Biz'},
+      {userid: 45, username: 'Augustus', roleid: 6, role: 'PO', teamid: 1, teamName: 'Sopranos', artid: 2, artName: 'Big Biz'},
+      {userid: 44, username: 'Kristin', roleid: 8, role: 'SU', teamid: 1, teamName: 'Sopranos', artid: 2, artName: 'Big Biz'},
+      {userid: 43, username: 'Andria', roleid: 8, role: 'SU', teamid: 1, teamName: 'Sopranos', artid: 2, artName: 'Big Biz'},
+      {userid: 42, username: 'Fannie', roleid: 8, role: 'SU', teamid: 1, teamName: 'Sopranos', artid: 2, artName: 'Big Biz'},
+      {userid: 41, username: 'Donovan',roleid: 8,  role: 'SU', teamid: 1, teamName: 'Sopranos', artid: 2, artName: 'Big Biz'},
     ]
   }
 

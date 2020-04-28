@@ -16,14 +16,9 @@ export class TeamTemplateComponent implements OnInit {
     maintainAspectRatio: false,
   };
 
-  // @Input() public Width: number;
-  // @Input() public Height: number;
-  // public H: number;
-  // public W: number;
-
   @Input() public TeamName: string;
   @Input() public TeamMembers: TeamMembers;
-  public allMembers: Array<User>;
+  public allMembers: Array<User> = [];
 
   @Input() public chartlabels1: string[];
   public ChartLabels1: string[];
@@ -57,8 +52,18 @@ export class TeamTemplateComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // this.W = this.Width;
-    // this.H = this.Height;
+    for (let i in this.TeamMembers.member)
+    {
+      if (this.TeamMembers.member[i].roleid == 6) {
+        this.allMembers.push(this.TeamMembers.member[i])
+      }
+      else if (this.TeamMembers.member[i].roleid == 7) {
+        this.allMembers.push(this.TeamMembers.member[i])
+      }
+      else if (this.TeamMembers.member[i].roleid == 8) {
+        this.allMembers.push(this.TeamMembers.member[i])
+      }
+    }
 
     this.ChartLabels1 = this.chartlabels1;
     this.ChartData1 = this.chartdata1;
@@ -76,7 +81,6 @@ export class TeamTemplateComponent implements OnInit {
     this.ChartData4 = this.chartdata4;
     this.ChartType4 = this.charttype4;
 
-    this.allMembers = this.TeamMembers.member;
   }
 
 }
