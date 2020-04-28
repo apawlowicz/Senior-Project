@@ -1,107 +1,35 @@
-<!------ Include the above in your HEAD tag ---------->
 
-<div id="wrapper">
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container-fluid">
-			<div class="navbar-header">
-    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        			<span class="sr-only">Toggle navigation</span>
-        			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>
-    			</button>
-                <div class="navbar-brand">
-                    <a id="menu-toggle" href="#" class="glyphicon glyphicon-align-justify btn-menu toggle">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                </div>
-<!----- Logo
-                <div class="selective-insurance-logo">
-                    <img src="assets/selective-insurance-logo.svg" class="logo">
-                  </div>
--->
-                  <div class="title">Agile Program Management Dashboard</div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 
-			</div>
-		</div>
-	</nav>
-    <!-- Sidebar -->
-    <div id="sidebar-wrapper">
-        <nav id="spy">
-            <ul class="sidebar-nav nav">
-                <li>
-                    <a href="#homedrop" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                    <ul class="collapse" id="homedrop">
-                        <li>
-                            <a routerLink="/login" routerLinkActive="active">
-                                <span class="fa fa-anchor solo">Login</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a routerLink="/register" routerLinkActive="active">
-                                <span class="fa fa-anchor solo">Register</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a routerLink="/password-recovery" routerLinkActive="active">
-                                <span class="fa fa-anchor solo">Password Recovery</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+    <ul class="navbar-nav">
+      <li ngbDropdown class="nav-item">
+        <a href (click)="false" class="nav-link" ngbDropdownToggle>Home</a>
+        <div ngbDropdownMenu>
+            <button ngbDropdownItem routerLink="/login" routerLinkActive="active">Login</button>
+            <button ngbDropdownItem routerLink="/register" routerLinkActive="active">Register</button>
+            <button ngbDropdownItem routerLink="/password-recovery" routerLinkActive="active">Password Recovery</button>
+          </div>
+      </li>
+      <li ngbDropdown class="nav-item">
+        <a href (click)="false" class="nav-link" ngbDropdownToggle>Admin</a>
+        <div ngbDropdownMenu>
+            <button ngbDropdownItem routerLink="/art-management" routerLinkActive="active">ART Management</button>
+            <button ngbDropdownItem routerLink="/team-management" routerLinkActive="active">Team Management</button>
+            <button ngbDropdownItem routerLink="/milestones-alerts" routerLinkActive="active">Milestones and Alerts</button>
+          </div>
+      </li>
+      <li ngbDropdown class="nav-item">
+        <a href (click)="false" class="nav-link" ngbDropdownToggle>Team</a>
+        <div ngbDropdownMenu>
+            <button ngbDropdownItem routerLink="/team-homepage" routerLinkActive="active">Team Homepage</button>
+            <button ngbDropdownItem routerLink="/data-entry" routerLinkActive="active">Metrics Data Entry</button>
+            <button ngbDropdownItem routerLink="/dashboard-preview" routerLinkActive="active">Dashboard Preview</button>
+          </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/display-mode" routerLinkActive="active">Dashboard Display Mode</a>
+      </li>
+    </ul>
 
-
-                <li>
-                    <a href="#admindrop" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Admin</a>
-                    <ul class="collapse" id="admindrop">
-                        <li>
-                            <a routerLink="/art-management" routerLinkActive="active">
-                                <span class="fa fa-anchor solo">ART Management</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a routerLink="/team-management" routerLinkActive="active">
-                                <span class="fa fa-anchor solo">Team Management</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a routerLink="/milestones-alerts" routerLinkActive="active">
-                                <span class="fa fa-anchor solo">Milestones and Alerts</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-
-                <li>
-                    <a href="#teamdrop" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Team</a>
-                    <ul class="collapse" id="teamdrop">
-                        <li>
-                            <a routerLink="/team-homepage" routerLinkActive="active">
-                                <span class="fa fa-anchor solo">Team Homepage</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a routerLink="/data-entry" routerLinkActive="active">
-                                <span class="fa fa-anchor solo">Metrics Data Entry</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a routerLink="/dashboard-preview" routerLinkActive="active">
-                                <span class="fa fa-anchor solo">Dashboard Preview</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-
-                <li>
-                    <a routerLink="/display-mode" routerLinkActive="active">
-                        <span class="fa fa-anchor solo">Dashboard Display Mode</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
-</div>
+    <div class="title">Agile Program Management Dashboard</div>
+</nav>

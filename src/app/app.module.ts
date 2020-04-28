@@ -35,21 +35,6 @@ import { TeamTemplateComponent } from './templates/team-template/team-template.c
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
-// import { NbThemeService, NbColorHelper } from '../../ngx-admin/node_modules/@nebular/theme';
-// import {
-//   NbChatModule,
-//   NbDatepickerModule,
-//   NbDialogModule,
-//   NbMenuModule,
-//   NbSidebarModule,
-//   NbToastrModule,
-//   NbWindowModule,
-// } from '../../ngx-admin/node_modules/@nebular/theme';
-// import { ChartjsBarComponent } from '../../ngx-admin/src/app/pages/charts/chartjs/chartjs-bar.component';
-// import { CoreModule } from '../../ngx-admin/src/app/@core/core.module';
-// import { ThemeModule } from '../../ngx-admin/src/app/@theme/theme.module';
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,17 +56,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ArtTemplateComponent,
     TeamTemplateComponent,
 
-    // ChartjsBarComponent,
-    // NbSidebarModule,
-    // NbMenuModule,
-    // NbDatepickerModule,
-    // NbDialogModule,
-    // NbWindowModule,
-    // NbToastrModule,
-    // NbChatModule,
-    // CoreModule,
-    // ThemeModule,
-
   ],
   imports: [
     Ng2SmartTableModule,
@@ -94,8 +68,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     NgbModule,
 
-    // NbThemeService, 
-    // NbColorHelper,
 
   ],
   providers: [authInterceptorProviders, DataService],

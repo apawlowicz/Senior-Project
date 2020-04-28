@@ -1,5 +1,5 @@
 .center {
-    margin: 0;
+    margin-top: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -22,7 +22,7 @@
     height: 500px;
   }
 
-  ol.carousel-indicators {
+  /* ol.carousel-indicators {
     position: absolute;
     margin: 0;
     left: 0;
@@ -37,7 +37,7 @@
   }
 
   ol.carousel-indicators li {
-    /* background-color: gray; */
+    background-color: gray;
     width: 20px;
     height: 10px;
     margin: 3px;
@@ -47,4 +47,4 @@
   
   ol.carousel-indicators li.active {
     background: gray;
-  }
+  } */
