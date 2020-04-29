@@ -52,6 +52,7 @@ export class TeamTemplateComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.TeamMembers)
     for (let i in this.TeamMembers)
     {
       if (this.TeamMembers[i].roleId == 6) {

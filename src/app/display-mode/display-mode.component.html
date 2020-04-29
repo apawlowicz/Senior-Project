@@ -24,7 +24,7 @@
   <div class="seperate"></div>
 
   <ngb-carousel class="inner" id="{{artTeams.artName}}" *ngFor='let artTeams of Art; index as j' data-interval="15000" style="visibility: hidden;" >
-    <ng-template ngbSlide id="{{team.teamName}}" *ngFor='let team of artTeams.teams; index as k'>
+    <ng-template ngbSlide id="{{team.teamName}}" *ngFor='let team of artTeams.artTeams; index as k'>
         <app-team-template
           [TeamMembers]="team.teamMembers"
 

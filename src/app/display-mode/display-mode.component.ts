@@ -29,7 +29,7 @@ export class DisplayModeComponent implements OnInit{
     { 
       artId: 2,
       artName: 'Big Biz',
-      teams: [
+      artTeams: [
         {artId: 2, artName: 'Big Biz', teamId: 1, teamName: 'Sopranos', 
           teamMembers: [ 
             {userId: 1, username: 'Jeremy', roleId: 5, role: 'RTE', teamId: 1, teamName: 'Sopranos',artId: 2, artName: 'Big Biz'},
@@ -57,17 +57,21 @@ export class DisplayModeComponent implements OnInit{
     {
       artId: 3,
       artName: 'CALMR',
-      teams: [
+      artTeams: [
         {artId: 3, artName: 'CALMR', teamId: 6, teamName: 'Mandalorians', 
           teamMembers: [
             {userId: 3, username: 'Meenal', roleId: 5, role: 'RTE', teamId: 6, teamName: 'Mandalorians', artId: 3, artName: 'CALMR'},
-            {userId: 4, username: 'Russ', roleId: 4, role: 'STE', teamId: 1, teamName: 'Mandalorians', artId: 3, artName: 'CALMR'},
-            {userId: 19, username: 'Socorro', roleId: 2, role: 'EX', teamId: 2, teamName: 'Mandalorians', artId: 3, artName: 'CALMR'},
+            {userId: 4, username: 'Russ', roleId: 4, role: 'STE', teamId: 6, teamName: 'Mandalorians', artId: 3, artName: 'CALMR'},
+            {userId: 19, username: 'Socorro', roleId: 2, role: 'EX', teamId: 6, teamName: 'Mandalorians', artId: 3, artName: 'CALMR'},
+            {userId: 25, username: 'Normand', roleId: 8, role: 'SU', teamId: 6, teamName: 'Mandalorians', artId: 3, artName: 'CALMR'},
+            {userId: 43, username: 'Andria', roleId: 8, role: 'SU', teamId: 6, teamName: 'Mandalorians', artId: 3, artName: 'CALMR'},
           ]},
         {artId: 3, artName: 'CALMR', teamId: 7, teamName: 'Team Awesome', 
           teamMembers: [
-            {userId: 14, username: 'Slyvia', roleId: 3, role: 'DM', teamId: 2, teamName: 'Team Awesome', artId: 3, artName: 'CALMR'},
-            {userId: 16, username: 'Dino', roleId: 4, role: 'STE', teamId: 3, teamName: 'Team Awesome', artId: 3, artName: 'CALMR'},
+            {userId: 14, username: 'Slyvia', roleId: 3, role: 'DM', teamId: 7, teamName: 'Team Awesome', artId: 3, artName: 'CALMR'},
+            {userId: 16, username: 'Dino', roleId: 4, role: 'STE', teamId: 7, teamName: 'Team Awesome', artId: 3, artName: 'CALMR'},
+            {userId: 37, username: 'Maryln', roleId: 8, role: 'SU', teamId: 7, teamName: 'Team Awesome', artId: 3, artName: 'CALMR'},
+            {userId: 31, username: 'Harrison', roleId: 8, role: 'SU', teamId: 7, teamName: 'Team Awesome', artId: 3, artName: 'CALMR'},
           ]},
       ],
     }
