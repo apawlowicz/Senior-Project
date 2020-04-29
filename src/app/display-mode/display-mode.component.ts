@@ -9,39 +9,67 @@ import { DataService } from '../models/data.service';
 })
 
 export class DisplayModeComponent implements OnInit{
+
+  public activeSlide: number
+  public onSlide(slideData) {
+    for (let i in this.Art) {
+      document.getElementById(this.Art[i].artName).style.visibility = 'hidden'
+    }
+    this.activeSlide = slideData.current
+    for (let i in this.Art) {
+      if (this.activeSlide == this.Art[i].artId) {
+        document.getElementById(this.Art[i].artName).style.visibility = 'visible'
+      }
+    }
+    console.log(this.activeSlide)
+  }
+
   
   public Art = [
     { 
-      artid: 2,
+      artId: 2,
       artName: 'Big Biz',
       teams: [
-        {teamId: 1, teamName: 'Sopranos', artName: 'Big Biz'},
-        {teamId: 2, teamName: 'Agilistas', artName: 'Big Biz'},
-        {teamId: 3, teamName: 'Illuminati', artName: 'Big Biz'},
-      ],
-      member: [ 
-        {userid: 1, username: 'Jeremy', roleid: 5, role: 'RTE', teamid: 1, teamName: 'Sopranos',artid: 2, artName: 'Big Biz'},
-        {userid: 2, username: 'Justin', roleid: 4, role: 'STE', teamid: 1, teamName: 'Sopranos',artid: 2, artName: 'Big Biz'},
-        {userid: 6, username: 'SteveDM', roleid: 2, role: 'EX', teamid: 2, teamName: 'Agilistas',artid: 2, artName: 'Big Biz'},
-        {userid: 11, username: 'Tim', roleid: 3, role: 'DM', teamid: 2, teamName: 'Agilistas',artid: 2, artName: 'Big Biz'},
-        {userid: 8, username: 'Lisa', roleid: 4, role: 'STE', teamid: 3, teamName: 'Illuminati',artid: 2, artName: 'Big Biz'},
-      ] 
+        {artId: 2, artName: 'Big Biz', teamId: 1, teamName: 'Sopranos', 
+          teamMembers: [ 
+            {userId: 1, username: 'Jeremy', roleId: 5, role: 'RTE', teamId: 1, teamName: 'Sopranos',artId: 2, artName: 'Big Biz'},
+            {userId: 2, username: 'Justin', roleId: 4, role: 'STE', teamId: 1, teamName: 'Sopranos',artId: 2, artName: 'Big Biz'},
+            {userId: 46, username: 'Danilo', roleId: 7, role: 'SM', teamId: 1, teamName: 'Sopranos', artId: 2, artName: 'Big Biz'},
+            {userId: 45, username: 'Augustus', roleId: 6, role: 'PO', teamId: 1, teamName: 'Sopranos', artId: 2, artName: 'Big Biz'},
+            {userId: 44, username: 'Kristin', roleId: 8, role: 'SU', teamId: 1, teamName: 'Sopranos', artId: 2, artName: 'Big Biz'},
+            {userId: 43, username: 'Andria', roleId: 8, role: 'SU', teamId: 1, teamName: 'Sopranos', artId: 2, artName: 'Big Biz'},
+            {userId: 41, username: 'Donovan',roleId: 8,  role: 'SU', teamId: 1, teamName: 'Sopranos', artId: 2, artName: 'Big Biz'},
+          ]},
+        {artId: 2, artName: 'Big Biz', teamId: 2, teamName: 'Agilistas', 
+          teamMembers: [
+            {userId: 6, username: 'SteveDM', roleId: 2, role: 'EX', teamId: 2, teamName: 'Agilistas',artId: 2, artName: 'Big Biz'},
+            {userId: 11, username: 'Tim', roleId: 3, role: 'DM', teamId: 2, teamName: 'Agilistas',artId: 2, artName: 'Big Biz'},
+            {userId: 42, username: 'Fannie', roleId: 8, role: 'SU', teamId: 2, teamName: 'Agilistas', artId: 2, artName: 'Big Biz'},
+          ]},
+        {artId: 2, artName: 'Big Biz', teamId: 3, teamName: 'Illuminati', 
+          teamMembers: [
+            {userId: 8, username: 'Lisa', roleId: 4, role: 'STE', teamId: 3, teamName: 'Illuminati',artId: 2, artName: 'Big Biz'},
+            {userId: 18, username: 'Katheleen', roleId: 8, role: 'SU', teamId: 3, teamName: 'Illuminati', artId: 2, artName: 'Big Biz'},
+          ]},
+      ]
     },
 
     {
-      artid: 3,
+      artId: 3,
       artName: 'CALMR',
       teams: [
-        {teamId: 6, teamName: 'Mandalorians', artName: 'CALMR'},
-        {teamId: 7, teamName: 'Team Awesome', artName: 'CALMR'},
+        {artId: 3, artName: 'CALMR', teamId: 6, teamName: 'Mandalorians', 
+          teamMembers: [
+            {userId: 3, username: 'Meenal', roleId: 5, role: 'RTE', teamId: 6, teamName: 'Mandalorians', artId: 3, artName: 'CALMR'},
+            {userId: 4, username: 'Russ', roleId: 4, role: 'STE', teamId: 1, teamName: 'Mandalorians', artId: 3, artName: 'CALMR'},
+            {userId: 19, username: 'Socorro', roleId: 2, role: 'EX', teamId: 2, teamName: 'Mandalorians', artId: 3, artName: 'CALMR'},
+          ]},
+        {artId: 3, artName: 'CALMR', teamId: 7, teamName: 'Team Awesome', 
+          teamMembers: [
+            {userId: 14, username: 'Slyvia', roleId: 3, role: 'DM', teamId: 2, teamName: 'Team Awesome', artId: 3, artName: 'CALMR'},
+            {userId: 16, username: 'Dino', roleId: 4, role: 'STE', teamId: 3, teamName: 'Team Awesome', artId: 3, artName: 'CALMR'},
+          ]},
       ],
-      member: [ 
-        {userid: 3, username: 'Meenal', roleid: 5, role: 'RTE', teamid: 6, teamName: 'Mandalorians', artid: 3, artName: 'CALMR'},
-        {userid: 4, username: 'Russ', roleid: 4, role: 'STE', teamid: 1, teamName: 'Mandalorians', artid: 3, artName: 'CALMR'},
-        {userid: 19, username: 'Socorro', roleid: 2, role: 'EX', teamid: 2, teamName: 'Mandalorians', artid: 3, artName: 'CALMR'},
-        {userid: 14, username: 'Slyvia', roleid: 3, role: 'DM', teamid: 2, teamName: 'Team Awesome', artid: 3, artName: 'CALMR'},
-        {userid: 16, username: 'Dino', roleid: 4, role: 'STE', teamid: 3, teamName: 'Team Awesome', artid: 3, artName: 'CALMR'},
-      ] 
     }
   ];
 
@@ -66,46 +94,6 @@ export class DisplayModeComponent implements OnInit{
   ];
   public ArtChart3 = 'bar';
 
-
-
-  public Teams = [
-    {teamId: 1, teamName: 'Sopranos', artid:2, artName:'Big Biz'},
-    {teamId: 2, teamName: 'Agilistas', artid:2, artName:'Big Biz'},
-    {teamId: 3, teamName: 'Illuminati', artid:2, artName:'Big Biz'},
-  ]
-
-  teammembers = [
-    {
-      teamId: 1,
-      teamName: 'Sopranos',
-      member: [ 
-        {userid: 1, username: 'Jeremy', roleid: 5, role: 'RTE', teamid: 1, teamName: 'Sopranos',artid: 2, artName: 'Big Biz'},
-        {userid: 2, username: 'Justin', roleid: 4, role: 'STE', teamid: 1, teamName: 'Sopranos',artid: 2, artName: 'Big Biz'},
-        {userid: 46, username: 'Danilo', roleid: 7, role: 'SM', teamid: 1, teamName: 'Sopranos', artid: 2, artName: 'Big Biz'},
-        {userid: 45, username: 'Augustus', roleid: 6, role: 'PO', teamid: 1, teamName: 'Sopranos', artid: 2, artName: 'Big Biz'},
-        {userid: 44, username: 'Kristin', roleid: 8, role: 'SU', teamid: 1, teamName: 'Sopranos', artid: 2, artName: 'Big Biz'},
-        {userid: 43, username: 'Andria', roleid: 8, role: 'SU', teamid: 1, teamName: 'Sopranos', artid: 2, artName: 'Big Biz'},
-        {userid: 41, username: 'Donovan',roleid: 8,  role: 'SU', teamid: 1, teamName: 'Sopranos', artid: 2, artName: 'Big Biz'},
-      ]
-    },
-    {
-      teamId: 2,
-      teamName: 'Agilistas',
-      member: [
-        {userid: 6, username: 'SteveDM', roleid: 2, role: 'EX', teamid: 2, teamName: 'Agilistas',artid: 2, artName: 'Big Biz'},
-        {userid: 11, username: 'Tim', roleid: 3, role: 'DM', teamid: 2, teamName: 'Agilistas',artid: 2, artName: 'Big Biz'},
-        {userid: 42, username: 'Fannie', roleid: 8, role: 'SU', teamid: 2, teamName: 'Agilistas', artid: 2, artName: 'Big Biz'},
-      ]
-    },
-    {
-      teamId: 3,
-      teamName: 'Illuminati',
-      member: [
-        {userid: 8, username: 'Lisa', roleid: 4, role: 'STE', teamid: 3, teamName: 'Illuminati',artid: 2, artName: 'Big Biz'},
-        {userid: 18, username: 'Katheleen', roleid: 8, role: 'SU', teamid: 3, teamName: 'Illuminati', artid: 2, artName: 'Big Biz'},
-      ]
-    }
-  ] 
 
   public TeamLabels1 = ['2007', '2008', '2009', '2010', '2011', '2012'];
   public TeamData1 = [
@@ -139,5 +127,10 @@ export class DisplayModeComponent implements OnInit{
   ngOnInit(){
     // return this.dataService.getTeams()
     // .subscribe(data => this.teams$ = data);
+    
+  }
+
+  ngAfterViewInit() {
+    document.getElementById(this.Art[0].artName).style.visibility = 'visible'
   }
 }

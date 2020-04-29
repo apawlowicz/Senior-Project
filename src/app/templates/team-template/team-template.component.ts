@@ -17,51 +17,51 @@ export class TeamTemplateComponent implements OnInit {
   };
 
   @Input() public TeamName: string;
-  @Input() public TeamMembers: TeamMembers;
-  public allMembers: Array<User> = [];
+  @Input() public TeamMembers: User[]
+  public allMembers: Array<User> = []
 
-  @Input() public chartlabels1: string[];
-  public ChartLabels1: string[];
-  @Input() public chartdata1: chartData[];
-  public ChartData1: chartData[];
-  @Input() public charttype1: string;
-  public ChartType1: string;
+  @Input() public chartlabels1: string[]
+  public ChartLabels1: string[]
+  @Input() public chartdata1: chartData[]
+  public ChartData1: chartData[]
+  @Input() public charttype1: string
+  public ChartType1: string
 
-  @Input() public chartlabels2: string[];
-  public ChartLabels2: string[];
-  @Input() public chartdata2: chartData[];
-  public ChartData2: chartData[];
-  @Input() public charttype2: string;
-  public ChartType2: string;
+  @Input() public chartlabels2: string[]
+  public ChartLabels2: string[]
+  @Input() public chartdata2: chartData[]
+  public ChartData2: chartData[]
+  @Input() public charttype2: string
+  public ChartType2: string
 
-  @Input() public chartlabels3: string[];
-  public ChartLabels3: string[];
-  @Input() public chartdata3: chartData[];
-  public ChartData3: chartData[];
-  @Input() public charttype3: string;
-  public ChartType3: string;
+  @Input() public chartlabels3: string[]
+  public ChartLabels3: string[]
+  @Input() public chartdata3: chartData[]
+  public ChartData3: chartData[]
+  @Input() public charttype3: string
+  public ChartType3: string
 
-  @Input() public chartlabels4: string[];
-  public ChartLabels4: string[];
-  @Input() public chartdata4: chartData[];
-  public ChartData4: chartData[];
-  @Input() public charttype4: string;
-  public ChartType4: string;
+  @Input() public chartlabels4: string[]
+  public ChartLabels4: string[]
+  @Input() public chartdata4: chartData[]
+  public ChartData4: chartData[]
+  @Input() public charttype4: string
+  public ChartType4: string
 
 
   constructor() { }
 
   ngOnInit() {
-    for (let i in this.TeamMembers.member)
+    for (let i in this.TeamMembers)
     {
-      if (this.TeamMembers.member[i].roleid == 6) {
-        this.allMembers.push(this.TeamMembers.member[i])
+      if (this.TeamMembers[i].roleId == 6) {
+        this.allMembers.push(this.TeamMembers[i])
       }
-      else if (this.TeamMembers.member[i].roleid == 7) {
-        this.allMembers.push(this.TeamMembers.member[i])
+      else if (this.TeamMembers[i].roleId == 7) {
+        this.allMembers.push(this.TeamMembers[i])
       }
-      else if (this.TeamMembers.member[i].roleid == 8) {
-        this.allMembers.push(this.TeamMembers.member[i])
+      else if (this.TeamMembers[i].roleId == 8) {
+        this.allMembers.push(this.TeamMembers[i])
       }
     }
 

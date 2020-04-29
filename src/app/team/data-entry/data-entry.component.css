@@ -7,3 +7,23 @@
   transform: translate(-50%, -50%);
 }
 
+  
+.seperate {
+  border-top: black solid;
+  margin: 5px;
+}
+
+.outter {
+  display: inline-block;
+  margin-top: 20px;
+  height: 300px;
+}
+
+.inner {
+  /* float: left; */
+  height: 500px;
+  /* align-content: center; */
+  width: 100%;
+  position: absolute;
+
+}

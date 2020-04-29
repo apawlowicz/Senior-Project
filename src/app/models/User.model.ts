@@ -1,10 +1,10 @@
 export class User{
-    userid: number;
+    userId: number;
     username: string;
-    roleid: number;
+    roleId: number;
     role: string;
-    teamid: number;
+    teamId: number;
     teamName: string;
-    artid: number;
+    artId: number;
     artName: string;
 }

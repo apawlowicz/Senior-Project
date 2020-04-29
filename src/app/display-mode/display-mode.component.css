@@ -20,6 +20,8 @@
   .inner {
     /* display: inline-block; */
     height: 500px;
+    width: 100%;
+    position: absolute;
   }
 
   /* ol.carousel-indicators {

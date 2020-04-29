@@ -44,19 +44,20 @@ export class ArtTemplateComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    for (let i in this.Art.member)
-    {
-      if (this.Art.member[i].roleid == 2) {
-        this.allMembers.push(this.Art.member[i])
-      }
-      else if (this.Art.member[i].roleid == 3) {
-        this.allMembers.push(this.Art.member[i])
-      }
-      else if (this.Art.member[i].roleid == 4) {
-        this.allMembers.push(this.Art.member[i])
-      }
-      else if (this.Art.member[i].roleid == 5) {
-        this.allMembers.push(this.Art.member[i])
+    for (let i in this.Art.artTeams) {
+      for (let j in this.Art.artTeams[i].teamMembers) {
+        if (this.Art.artTeams[i].teamMembers[j].roleId == 2) {
+          this.allMembers.push(this.Art.artTeams[i].teamMembers[j])
+        }
+        else if (this.Art.artTeams[i].teamMembers[j].roleId == 3) {
+          this.allMembers.push(this.Art.artTeams[i].teamMembers[j])
+        }
+        else if (this.Art.artTeams[i].teamMembers[j].roleId == 4) {
+          this.allMembers.push(this.Art.artTeams[i].teamMembers[j])
+        }
+        else if (this.Art.artTeams[i].teamMembers[j].roleId == 5) {
+          this.allMembers.push(this.Art.artTeams[i].teamMembers[j])
+        }
       }
     }
 
@@ -72,9 +73,12 @@ export class ArtTemplateComponent implements OnInit {
     this.ChartData3 = this.chartdata3;
     this.ChartType3 = this.charttype3;
 
-    this.Teams = this.Art.teams;
-    this.allMembers = this.Art.member;
+    this.Teams = this.Art.artTeams;
 
+  }
+
+  ngAfterViewInit() {
+  
   }
 
 }

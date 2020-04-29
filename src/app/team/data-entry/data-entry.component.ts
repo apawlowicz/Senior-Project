@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef,  } from '@angular/core';
 
 @Component({
   selector: 'app-data-entry',
@@ -11,7 +11,9 @@ export class DataEntryComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    
+  }
+
+  ngAfterViewInit() {
   }
 
 }
