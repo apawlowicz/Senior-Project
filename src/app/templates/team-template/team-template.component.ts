@@ -53,6 +53,7 @@ export class TeamTemplateComponent implements OnInit {
   public PI: number
   public defects: string
   public velocity: number
+  public happiness: number
 
 
   constructor() { }
@@ -61,6 +62,7 @@ export class TeamTemplateComponent implements OnInit {
     this.PI = 35
     this.defects = '90%'
     this.velocity = 65
+    this.happiness = 7.5
 
     for (let i in this.team.teamMembers)
     {
