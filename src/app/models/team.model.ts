@@ -1,4 +1,5 @@
 import { User } from './User.model'
+import { chartData } from './chartData.model';
 
 export class Team{
     artId: number;
@@ -6,5 +7,6 @@ export class Team{
     teamId: number;
     teamName: string;
     teamMembers: User[];
+    teamData: chartData[];
 
 }

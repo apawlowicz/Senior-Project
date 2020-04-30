@@ -1,4 +1,7 @@
+import { ChartDataSet } from './chartDataSet.model'
+
 export class chartData{
-    data: number[];
-    label: string;
+    type: string;
+    labels: string[];
+    dataSet: ChartDataSet[];
 }

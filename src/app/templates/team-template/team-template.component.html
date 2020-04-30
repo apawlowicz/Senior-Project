@@ -2,7 +2,7 @@
     <div class="row board">
         <div class="col-md-3">
             <div>
-                <h2 style="overflow-wrap: normal;">{{TeamMembers[0].teamName}}</h2>
+                <h2 style="overflow-wrap: normal;">{{team.teamName}}</h2>
                 <br>
                 <div *ngFor='let user of allMembers'>
                     <h4>{{user.role}} | {{user.username}}</h4>

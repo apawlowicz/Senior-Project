@@ -15,34 +15,14 @@
         <div class="col-md-9 vl">
             <div >
                 <div class="row bottom">
-                    <div class="col-md-3 graph">
+                    <div class="col-md-3 graph" *ngFor='let data of Art.artData'>
                         <canvas baseChart
                             height="250" width="225"
-                            [datasets]="ChartData1"
-                            [labels]="ChartLabels1"
+                            [datasets]="data.dataSet"
+                            [labels]="data.labels"
                             [options]="ChartOptions"
                             [legend]= true
-                            [chartType]="ChartType1">
-                        </canvas>
-                    </div>
-                    <div class="col-md-3 graph">
-                        <canvas baseChart
-                            height="250" width="225"
-                            [datasets]="ChartData2"
-                            [labels]="ChartLabels2"
-                            [options]="ChartOptions"
-                            [legend]= true
-                            [chartType]="ChartType2">
-                        </canvas>
-                    </div>
-                    <div class="col-md-3 graph">
-                        <canvas baseChart
-                            height="250" width="225"
-                            [datasets]="ChartData3"
-                            [labels]="ChartLabels3"
-                            [options]="ChartOptions"
-                            [legend]= true
-                            [chartType]="ChartType3">
+                            [chartType]="data.type">
                         </canvas>
                     </div>
                     <div class="col-md-1">

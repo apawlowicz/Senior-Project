@@ -1,29 +1,12 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-            <h1> {{TeamName}} Team Dashboard Preview</h1>
+            <h1> {{Team.teamName}} Team Dashboard Preview</h1>
         </div>
     </div>
     <div class="board">
         <app-team-template 
-            [TeamMembers]="teammembers.teamMembers"
-
-            [chartlabels1]="TeamLabels1"
-            [chartdata1]="TeamData1"
-            [charttype1]="TeamChart1"
-            
-            [chartlabels2]="TeamLabels2"
-            [chartdata2]="TeamData2"
-            [charttype2]="TeamChart2"
-
-            [chartlabels3]="TeamLabels3"
-            [chartdata3]="TeamData3"
-            [charttype3]="TeamChart3"
-
-            [chartlabels4]="TeamLabels4"
-            [chartdata4]="TeamData4"
-            [charttype4]="TeamChart4"
-            >
+            [team]="Team">
         </app-team-template>
     </div>
 </div>
