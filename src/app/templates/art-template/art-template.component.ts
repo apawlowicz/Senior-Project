@@ -20,10 +20,16 @@ export class ArtTemplateComponent implements OnInit {
   public art: ART
   public Teams: Team[]
   public allMembers: Array<User> = []
+
+  public PI: number
+  public defects: string
   
   constructor() { }
 
   ngOnInit() {
+    this.PI = 8
+    this.defects = "50%"
+    
     for (let i in this.Art.artTeams) {
       for (let j in this.Art.artTeams[i].teamMembers) {
         if (this.Art.artTeams[i].teamMembers[j].roleId == 2) {

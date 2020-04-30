@@ -50,10 +50,18 @@ export class TeamTemplateComponent implements OnInit {
   @Input() public charttype4: string
   public ChartType4: string
 
+  public PI: number
+  public defects: string
+  public velocity: number
+
 
   constructor() { }
 
   ngOnInit() {
+    this.PI = 35
+    this.defects = '90%'
+    this.velocity = 65
+
     for (let i in this.team.teamMembers)
     {
       if (this.team.teamMembers[i].roleId == 6) {
