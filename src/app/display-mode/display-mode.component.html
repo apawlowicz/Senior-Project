@@ -1,8 +1,8 @@
 
 <div>
 
-  <ngb-carousel class="outter" id="ARTS" data-interval="120000" (slide)="onSlide($event)">
-    <ng-template ngbSlide id="{{art.artId}}" *ngFor='let art of Art; index as i'>
+  <ngb-carousel class="outter" id="ARTS" data-interval="120000" (slide)="onSlide($event)" data-ride="carousel">
+    <ng-template ngbSlide id="{{art.artId}}" *ngFor="let art of Art; index as i" data-ride="carousel">
         <app-art-template
           [Art]="art" >
         </app-art-template>
@@ -11,8 +11,8 @@
 
   <div class="seperate"></div>
 
-  <ngb-carousel class="inner" id="{{artTeams.artName}}" *ngFor='let artTeams of Art; index as j' data-interval="15000" style="visibility: hidden;" >
-    <ng-template ngbSlide id="{{team.teamName}}" *ngFor='let team of artTeams.artTeams; index as k'>
+  <ngb-carousel class="inner" id="{{artTeams.artName}}" *ngFor="let artTeams of Art; index as j" data-interval="15000" style="visibility: hidden;" data-ride="carousel">
+    <ng-template ngbSlide id="{{team.teamName}}" *ngFor="let team of artTeams.artTeams; index as k" data-ride="carousel">
         <app-team-template
           [team]="team" >
         </app-team-template>
