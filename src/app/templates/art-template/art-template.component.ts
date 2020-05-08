@@ -28,7 +28,7 @@ export class ArtTemplateComponent implements OnInit {
 
   ngOnInit() {
     this.PI = 8
-    this.defects = "50%"
+    this.defects = "50"
     
     for (let i in this.Art.artTeams) {
       for (let j in this.Art.artTeams[i].teamMembers) {

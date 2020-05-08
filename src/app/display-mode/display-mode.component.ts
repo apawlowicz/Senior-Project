@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Team } from '../models/team.model';
 import { DataService } from '../models/data.service';
 import { ART } from '../models/ART.model';
+import { User } from '../models/User.model';
+import { TemplateBinding } from '@angular/compiler';
 
 @Component({
   selector: 'app-display-mode',
@@ -9,7 +11,9 @@ import { ART } from '../models/ART.model';
   styleUrls: ['./display-mode.component.css']
 })
 
-export class DisplayModeComponent implements OnInit{
+export class DisplayModeComponent implements OnInit {
+
+  public initialized = false;
 
   public activeSlide: number
   public onSlide(slideData) {
@@ -30,235 +34,233 @@ export class DisplayModeComponent implements OnInit{
   constructor(private dataService: DataService) {
   }
 
-  ngOnInit(){
+
+  ngOnInit() {
     // return this.dataService.getTeams()
     // .subscribe(data => this.teams$ = data);
-    
+
     this.Art = [
-      { 
-        artId: 2,
-        artName: 'Big Biz',
+      {
+        artId: 1,
+        artName: 'CALMR',
         artTeams: [
-          {artId: 2, artName: 'Big Biz', teamId: 1, teamName: 'Sopranos', 
-            teamMembers: [ 
-              {userId: 1, username: 'Jeremy', roleId: 5, role: 'RTE', teamId: 1, teamName: 'Sopranos',artId: 2, artName: 'Big Biz'},
-              {userId: 2, username: 'Justin', roleId: 4, role: 'STE', teamId: 1, teamName: 'Sopranos',artId: 2, artName: 'Big Biz'},
-              {userId: 46, username: 'Danilo', roleId: 7, role: 'SM', teamId: 1, teamName: 'Sopranos', artId: 2, artName: 'Big Biz'},
-              {userId: 45, username: 'Augustus', roleId: 6, role: 'PO', teamId: 1, teamName: 'Sopranos', artId: 2, artName: 'Big Biz'},
-              {userId: 44, username: 'Kristin', roleId: 8, role: 'SU', teamId: 1, teamName: 'Sopranos', artId: 2, artName: 'Big Biz'},
-              {userId: 43, username: 'Andria', roleId: 8, role: 'SU', teamId: 1, teamName: 'Sopranos', artId: 2, artName: 'Big Biz'},
-              {userId: 41, username: 'Donovan',roleId: 8,  role: 'SU', teamId: 1, teamName: 'Sopranos', artId: 2, artName: 'Big Biz'},
-            ],
+          {
+            artId: 1, artName: 'CALMR', teamId: 1, teamName: 'Illuminati',
+            teamMembers: [],
             teamData: [
-              {type: 'line', labels: ['2007', '2008', '2009', '2010', '2011', '2012'], 
+              {
+                type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
                 dataSet: [
-                  {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-                  {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
+                  { data: [1.5, 2, 2, 1], label: 'Productivity', fill: false },
+                  { data: [2, 1, .5, 1.5], label: 'Predictability', fill: false },
+                  { data: [1.5, 1, 2, 2], label: 'Quality', fill: false },
+                  { data: [2, 2, 2, 1], label: 'Engagement', fill: false }
                 ]
               },
-              {type: 'line', labels: ['2007', '2008', '2009', '2010', '2011', '2012'],
+              {
+                type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
                 dataSet: [
-                  {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-                  {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
+                  { data: [2, 2, 1, 0], label: 'Backlog Health', fill: false },
+                  { data: [1, 2, 2, 2], label: 'Distributed Decision Making', fill: false }
+                ],
+              },
+              {
+                type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
+                dataSet: [
+                  { data: [1, 1, 0, 2], label: 'Defintion of Ready', fill: false },
+                  { data: [1.5, .5, 2, 1], label: 'Definition of Done', fill: false }
                 ]
               },
-              {type: 'bar', labels: ['2007', '2008', '2009', '2010', '2011', '2012'],
+              {
+                type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
                 dataSet: [
-                  {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-                  {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
-                ]
-              },
-              {type: 'pie', labels: ['Sales Q1', 'Sales Q2', 'Sales Q3', 'Sales Q4'],
-                dataSet: [
-                  {data: [120, 150, 180, 90], label: ''}
+                  { data: [2, 2, 1, 1], label: 'Automated CI/CD', fill: false },
+                  { data: [1, 2, 2, 0], label: 'Automated Unit Testing', fill: false }
                 ]
               },
             ]
           },
-          {artId: 2, artName: 'Big Biz', teamId: 2, teamName: 'Agilistas', 
-            teamMembers: [
-              {userId: 6, username: 'SteveDM', roleId: 2, role: 'EX', teamId: 2, teamName: 'Agilistas',artId: 2, artName: 'Big Biz'},
-              {userId: 11, username: 'Tim', roleId: 3, role: 'DM', teamId: 2, teamName: 'Agilistas',artId: 2, artName: 'Big Biz'},
-              {userId: 42, username: 'Fannie', roleId: 8, role: 'SU', teamId: 2, teamName: 'Agilistas', artId: 2, artName: 'Big Biz'},
-            ],
+          {
+            artId: 1, artName: 'CALMR', teamId: 2, teamName: 'Scrum Lords',
+            teamMembers: [],
             teamData: [
-              {type: 'line', labels: ['2007', '2008', '2009', '2010', '2011', '2012'], 
+              {
+                type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
                 dataSet: [
-                  {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-                  {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
+                  { data: [1, 1, 2, 2], label: 'Productivity', fill: false },
+                  { data: [1.5, 2, 2, 1], label: 'Predictability', fill: false },
+                  { data: [2, .5, 1, 1], label: 'Quality', fill: false },
+                  { data: [2, 2, 2, 2], label: 'Engagement', fill: false }
                 ]
               },
-              {type: 'line', labels: ['2007', '2008', '2009', '2010', '2011', '2012'],
+              {
+                type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
                 dataSet: [
-                  {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-                  {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
+                  { data: [1, 1, 2, 2], label: 'Backlog Health', fill: false },
+                  { data: [1, 1, 2, 2], label: 'Distributed Decision Making', fill: false }
+                ],
+              },
+              {
+                type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
+                dataSet: [
+                  { data: [1, 2, 2, 0], label: 'Defintion of Ready', fill: false },
+                  { data: [2, 2, 2, 2], label: 'Definition of Done', fill: false }
                 ]
               },
-              {type: 'bar', labels: ['2007', '2008', '2009', '2010', '2011', '2012'],
+              {
+                type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
                 dataSet: [
-                  {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-                  {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
-                ]
-              },
-              {type: 'pie', labels: ['Sales Q1', 'Sales Q2', 'Sales Q3', 'Sales Q4'],
-                dataSet: [
-                  {data: [120, 150, 180, 90], label: ''}
+                  { data: [2, 2, 2, 2], label: 'Automated CI/CD', fill: false },
+                  { data: [2, 2, 2, 2], label: 'Automated Unit Testing', fill: false }
                 ]
               },
             ]
-          },
-          {artId: 2, artName: 'Big Biz', teamId: 3, teamName: 'Illuminati', 
-            teamMembers: [
-              {userId: 8, username: 'Lisa', roleId: 4, role: 'STE', teamId: 3, teamName: 'Illuminati',artId: 2, artName: 'Big Biz'},
-              {userId: 18, username: 'Katheleen', roleId: 8, role: 'SU', teamId: 3, teamName: 'Illuminati', artId: 2, artName: 'Big Biz'},
-            ],
-            teamData: [
-              {type: 'line', labels: ['2007', '2008', '2009', '2010', '2011', '2012'], 
-                dataSet: [
-                  {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-                  {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
-                ]
-              },
-              {type: 'line', labels: ['2007', '2008', '2009', '2010', '2011', '2012'],
-                dataSet: [
-                  {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-                  {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
-                ]
-              },
-              {type: 'bar', labels: ['2007', '2008', '2009', '2010', '2011', '2012'],
-                dataSet: [
-                  {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-                  {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
-                ]
-              },
-              {type: 'pie', labels: ['Sales Q1', 'Sales Q2', 'Sales Q3', 'Sales Q4'],
-                dataSet: [
-                  {data: [120, 150, 180, 90], label: ''}
-                ]
-              },
-            ]
-          },
+          }
         ],
         artData: [
-          {type: 'line', labels: ['2007', '2008', '2009', '2010', '2011', '2012'], 
+          {
+            type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
             dataSet: [
-              {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-              {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
-            ]
+              { data: [2, 2, 1, 1.5], label: 'Backlog Health', fill: false },
+              { data: [1.5, 1, 2, 2], label: 'Distributed Decision Making', fill: false }
+            ],
           },
-          {type: 'line', labels: ['2007', '2008', '2009', '2010', '2011', '2012'],
+          {
+            type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
             dataSet: [
-              {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-              {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
-            ]
+              { data: [1, 2, 0, 2], label: 'Defintion of Ready', fill: false },
+              { data: [2, 1.5, 2, 2], label: 'Definition of Done', fill: false }
+            ],
           },
-          {type: 'bar', labels: ['2007', '2008', '2009', '2010', '2011', '2012'],
+          {
+            type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
             dataSet: [
-              {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-              {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
-            ]
+              { data: [1, 2, 1.5, 0], label: 'Automated CI/CD', fill: false },
+              { data: [2, 1, 2, 1], label: 'Automated Unit Testing', fill: false }
+            ],
           },
         ]
       },
-  
       {
-        artId: 3,
-        artName: 'CALMR',
+        artId: 2,
+        artName: 'Big Biz',
         artTeams: [
-          {artId: 3, artName: 'CALMR', teamId: 6, teamName: 'Mandalorians', 
-            teamMembers: [
-              {userId: 3, username: 'Meenal', roleId: 5, role: 'RTE', teamId: 6, teamName: 'Mandalorians', artId: 3, artName: 'CALMR'},
-              {userId: 4, username: 'Russ', roleId: 4, role: 'STE', teamId: 6, teamName: 'Mandalorians', artId: 3, artName: 'CALMR'},
-              {userId: 19, username: 'Socorro', roleId: 2, role: 'EX', teamId: 6, teamName: 'Mandalorians', artId: 3, artName: 'CALMR'},
-              {userId: 25, username: 'Normand', roleId: 8, role: 'SU', teamId: 6, teamName: 'Mandalorians', artId: 3, artName: 'CALMR'},
-              {userId: 43, username: 'Andria', roleId: 8, role: 'SU', teamId: 6, teamName: 'Mandalorians', artId: 3, artName: 'CALMR'},
-            ],
+          {
+            artId: 2, artName: 'Big Biz', teamId: 1, teamName: 'Sopranos',
+            teamMembers: [],
             teamData: [
-              {type: 'line', labels: ['2007', '2008', '2009', '2010', '2011', '2012'], 
+              {
+                type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
                 dataSet: [
-                  {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-                  {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
+                  { data: [1, 1, 1.5, 2], label: 'Productivity', fill: false },
+                  { data: [2, 2, 1.5, 1.5], label: 'Predictability', fill: false },
+                  { data: [2, 1.5, 1, 2], label: 'Quality', fill: false },
+                  { data: [1, 2, 2, 1], label: 'Engagement', fill: false }
                 ]
               },
-              {type: 'line', labels: ['2007', '2008', '2009', '2010', '2011', '2012'],
+              {
+                type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
                 dataSet: [
-                  {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-                  {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
+                  { data: [1, 1, 2, 2], label: 'Backlog Health', fill: false },
+                  { data: [1, 1, 1, 2], label: 'Distributed Decision Making', fill: false }
+                ],
+              },
+              {
+                type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
+                dataSet: [
+                  { data: [2, 2, 2, 1], label: 'Defintion of Ready', fill: false },
+                  { data: [2, 2, 1, 2], label: 'Definition of Done', fill: false }
                 ]
               },
-              {type: 'bar', labels: ['2007', '2008', '2009', '2010', '2011', '2012'],
+              {
+                type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
                 dataSet: [
-                  {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-                  {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
-                ]
-              },
-              {type: 'pie', labels: ['Sales Q1', 'Sales Q2', 'Sales Q3', 'Sales Q4'],
-                dataSet: [
-                  {data: [120, 150, 180, 90], label: ''}
+                  { data: [2, 2, 1, 2], label: 'Automated CI/CD', fill: false },
+                  { data: [2, 1, 1, 2], label: 'Automated Unit Testing', fill: false }
                 ]
               },
             ]
           },
-          {artId: 3, artName: 'CALMR', teamId: 7, teamName: 'Team Awesome', 
-            teamMembers: [
-              {userId: 14, username: 'Slyvia', roleId: 3, role: 'DM', teamId: 7, teamName: 'Team Awesome', artId: 3, artName: 'CALMR'},
-              {userId: 16, username: 'Dino', roleId: 4, role: 'STE', teamId: 7, teamName: 'Team Awesome', artId: 3, artName: 'CALMR'},
-              {userId: 37, username: 'Maryln', roleId: 8, role: 'SU', teamId: 7, teamName: 'Team Awesome', artId: 3, artName: 'CALMR'},
-              {userId: 31, username: 'Harrison', roleId: 8, role: 'SU', teamId: 7, teamName: 'Team Awesome', artId: 3, artName: 'CALMR'},
-            ],
+          {
+            artId: 2, artName: 'Big Biz', teamId: 2, teamName: 'Angilistas',
+            teamMembers: [],
             teamData: [
-              {type: 'line', labels: ['2007', '2008', '2009', '2010', '2011', '2012'], 
+              {
+                type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
                 dataSet: [
-                  {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-                  {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
+                  { data: [2, 1, 1.5, 1], label: 'Productivity', fill: false },
+                  { data: [1, 1, 2, 2], label: 'Predictability', fill: false },
+                  { data: [.5, 2, 2, 2], label: 'Quality', fill: false },
+                  { data: [2, 1, 1, 2], label: 'Engagement', fill: false }
                 ]
               },
-              {type: 'line', labels: ['2007', '2008', '2009', '2010', '2011', '2012'],
+              {
+                type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
                 dataSet: [
-                  {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-                  {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
+                  { data: [2, 2, 2, 2], label: 'Backlog Health', fill: false },
+                  { data: [2, 0, 1, 0], label: 'Distributed Decision Making', fill: false }
+                ],
+              },
+              {
+                type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
+                dataSet: [
+                  { data: [1, 2, 2, 2], label: 'Defintion of Ready', fill: false },
+                  { data: [1, 0, 2, 2], label: 'Definition of Done', fill: false }
                 ]
               },
-              {type: 'bar', labels: ['2007', '2008', '2009', '2010', '2011', '2012'],
+              {
+                type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
                 dataSet: [
-                  {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-                  {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
-                ]
-              },
-              {type: 'pie', labels: ['Sales Q1', 'Sales Q2', 'Sales Q3', 'Sales Q4'],
-                dataSet: [
-                  {data: [120, 150, 180, 90], label: ''}
+                  { data: [1, 2, 2, 2], label: 'Automated CI/CD', fill: false },
+                  { data: [0, 2, 2, 2], label: 'Automated Unit Testing', fill: false }
                 ]
               },
             ]
-          },
+          }
         ],
         artData: [
-          {type: 'line', labels: ['2007', '2008', '2009', '2010', '2011', '2012'], 
+          {
+            type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
             dataSet: [
-              {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-              {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
-            ]
+              { data: [1, 2, 2, 1], label: 'Backlog Health', fill: false },
+              { data: [0, 2, 1.5, 1], label: 'Distributed Decision Making', fill: false }
+            ],
           },
-          {type: 'line', labels: ['2007', '2008', '2009', '2010', '2011', '2012'],
+          {
+            type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
             dataSet: [
-              {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-              {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
-            ]
+              { data: [2, 2, 0, 2], label: 'Defintion of Ready', fill: false },
+              { data: [1, .5, 1, 2], label: 'Definition of Done', fill: false }
+            ],
           },
-          {type: 'bar', labels: ['2007', '2008', '2009', '2010', '2011', '2012'],
+          {
+            type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
             dataSet: [
-              {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-              {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
-            ]
+              { data: [2, 1, 1, .5], label: 'Automated CI/CD', fill: false },
+              { data: [1, 2, 1, 1], label: 'Automated Unit Testing', fill: false }
+            ],
           },
         ]
       }
-    ];
-
+    ]
   }
 
   ngAfterViewInit() {
-    document.getElementById(this.Art[0].artName).style.visibility = 'visible'
+    this.Art.forEach((artData) => {
+      artData.artTeams.forEach((teamData) => {
+        this.dataService.getUser(teamData.teamId, artData.artId).subscribe(data => {
+          teamData.teamMembers = data;
+
+          if(artData.artId === this.Art[this.Art.length-1].artId && teamData.teamId === artData.artTeams[artData.artTeams.length-1].teamId)
+            this.initialized = true;
+
+        });
+      })
+    })
+
+    setTimeout(() => {
+      document.getElementById(this.Art[0].artName).style.visibility = 'visible'
+    }, 500)
   }
+  
 }

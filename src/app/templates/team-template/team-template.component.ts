@@ -46,12 +46,12 @@ export class TeamTemplateComponent implements OnInit {
   @Input() public chartlabels4: string[]
   public ChartLabels4: string[]
   @Input() public chartdata4: chartData[]
-  public ChartData4: number[]
+  public ChartData4: ChartDataSet[]
   @Input() public charttype4: string
   public ChartType4: string
 
   public PI: number
-  public defects: string
+  public defects: number
   public velocity: number
   public happiness: number
 
@@ -60,7 +60,7 @@ export class TeamTemplateComponent implements OnInit {
 
   ngOnInit() {
     this.PI = 35
-    this.defects = '90%'
+    this.defects = 30
     this.velocity = 65
     this.happiness = 7.5
 
@@ -90,7 +90,7 @@ export class TeamTemplateComponent implements OnInit {
     this.ChartType3 = this.team.teamData[2].type
 
     this.ChartLabels4 = this.team.teamData[3].labels
-    this.ChartData4 = this.team.teamData[3].dataSet[0].data
+    this.ChartData4 = this.team.teamData[3].dataSet
     this.ChartType4 = this.team.teamData[3].type
 
   }

@@ -24,14 +24,23 @@ conn.connect((err) =>{
 });
  
 //show all products
-app.get('/',(req, res) => {
-  let sql = "SELECT * FROM teams";
+app.get('/tm',(req, res) => {
+  let sql = "SELECT A.PI, A.value, A.Subcategory FROM teammaturity AS A WHERE A.Subcategory LIKE 'Definition of Ready' OR A.Subcategory LIKE 'Backlog Health'";
   let query = conn.query(sql, (err, results) => {
     if(err) throw err;
     res.send(JSON.stringify(results));
   });
 });
  
+app.route('/user/:teamId/:artId').get((req, res) => {
+  console.log(req.params.teamId);
+  let sql = `SELECT * FROM user WHERE teamId = ${req.params.teamId||0} AND artId = ${req.params.artId||0};`;
+  let query = conn.query(sql, (err, results) => {
+    if(err) throw err;
+    res.send(JSON.stringify(results));
+  });
+});
+
 //Server listening
 app.listen(3000,() =>{
   console.log('Server started on port 3000...');

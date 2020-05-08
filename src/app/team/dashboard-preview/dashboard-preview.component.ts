@@ -28,27 +28,34 @@ export class DashboardPreviewComponent implements OnInit {
         {userId: 41, username: 'Donovan',roleId: 8,  role: 'SU', teamId: 1, teamName: 'Sopranos', artId: 2, artName: 'Big Biz'},
       ],
       teamData: [
-        {type: 'line', labels: ['2007', '2008', '2009', '2010', '2011', '2012'], 
+        {
+          type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
           dataSet: [
-            {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-            {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
+            { data: [1, 1, 1.5, 2], label: 'Productivity', fill: false },
+            { data: [2, 2, 1.5, 1.5], label: 'Predictability', fill: false },
+            { data: [2, 1.5, 1, 2], label: 'Quality', fill: false },
+            { data: [1, 2, 2, 1], label: 'Engagement', fill: false }
           ]
         },
-        {type: 'line', labels: ['2007', '2008', '2009', '2010', '2011', '2012'],
+        {
+          type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
           dataSet: [
-            {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-            {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
+            { data: [1, 1, 2, 2], label: 'Backlog Health', fill: false },
+            { data: [1, 1, 1, 2], label: 'Distributed Decision Making', fill: false }
+          ],
+        },
+        {
+          type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
+          dataSet: [
+            { data: [2, 2, 2, 1], label: 'Defintion of Ready', fill: false },
+            { data: [2, 2, 1, 2], label: 'Definition of Done', fill: false }
           ]
         },
-        {type: 'bar', labels: ['2007', '2008', '2009', '2010', '2011', '2012'],
+        {
+          type: 'line', labels: ['2019.2', '2019.3', '2019.4', '2020.1'],
           dataSet: [
-            {data: [59, 80, 81, 56, 55, 40], label: 'Series A'},
-            {data: [48, 40, 19, 86, 27, 90], label: 'Series B'}
-          ]
-        },
-        {type: 'pie', labels: ['Sales Q1', 'Sales Q2', 'Sales Q3', 'Sales Q4'],
-          dataSet: [
-            {data: [120, 150, 180, 90], label: ''}
+            { data: [2, 2, 1, 2], label: 'Automated CI/CD', fill: false },
+            { data: [2, 1, 1, 2], label: 'Automated Unit Testing', fill: false }
           ]
         },
       ]

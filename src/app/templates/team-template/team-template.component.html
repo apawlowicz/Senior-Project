@@ -74,10 +74,12 @@
                     <div class="col-md-4">
                         <canvas baseChart
                             height="250" width="250"
-                            [data]="ChartData4"
+                            [datasets]="ChartData4"
                             [labels]="ChartLabels4"
+                            [options]="ChartOptions"
                             [legend]= true
-                            [chartType]="ChartType4"></canvas>
+                            [chartType]="ChartType4">
+                        </canvas>
                     </div>
                 </div>
             </div>
